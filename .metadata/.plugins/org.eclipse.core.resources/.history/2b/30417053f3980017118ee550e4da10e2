@@ -1,0 +1,12 @@
+package com.mitocode;
+
+import com.mitocode.service.IPersonaService;
+
+public class App {
+	
+	public static void main(String[] args){
+		IPersonaService service = new PersonaServiceImpl();
+		service.create(new Persona(1,"David","Zuzunaga"));
+	}
+
+}
