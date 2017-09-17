@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename field &apos;dao&apos; in &apos;com.mitocode.service.PersonaServiceImpl&apos; to &apos;daoPersona&apos;&#x0D;&#x0A;- Original project: &apos;SpringMixtoBD&apos;&#x0D;&#x0A;- Original element: &apos;com.mitocode.service.PersonaServiceImpl.dao&apos;&#x0D;&#x0A;- Renamed element: &apos;com.mitocode.service.PersonaServiceImpl.daoPersona&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" delegate="false" deprecate="false" description="Rename field &apos;dao&apos;" flags="589826" getter="false" id="org.eclipse.jdt.ui.rename.field" input="/src\/main\/java&lt;com.mitocode.service{PersonaServiceImpl.java[PersonaServiceImpl^dao" name="daoPersona" references="true" setter="false" stamp="1505355947459" textual="false" version="1.0"/>
-</session>
