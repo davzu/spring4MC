@@ -1,0 +1,35 @@
+-- Database: crud
+
+-- DROP DATABASE crud;
+
+CREATE DATABASE crud
+    WITH 
+    OWNER = postgres
+    ENCODING = 'UTF8'
+    LC_COLLATE = 'Spanish_Spain.1252'
+    LC_CTYPE = 'Spanish_Spain.1252'
+    TABLESPACE = pg_default
+    CONNECTION LIMIT = -1;
+
+CREATE SEQUENCE public.persona_id_seq
+    INCREMENT 1
+    START 1
+    MINVALUE 1
+    MAXVALUE 99999999
+    CACHE 1;
+
+ALTER SEQUENCE public.persona_id_seq
+    OWNER TO postgres;
+
+
+
+CREATE TABLE public.persona
+(
+    id integer NOT NULL DEFAULT nextval('persona_id_seq'::regclass),
+    apellidos character varying,
+    nombres character varying,
+    CONSTRAINT persona_pkey PRIMARY KEY (id)
+)
+WITH (
+    OIDS=FALSE
+);

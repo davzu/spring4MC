@@ -1,0 +1,4 @@
+sts => alt + F5  => maven update
+sts => alt + shift + s => generar código
+sts => ctrl + shift + o => organizador de imports
+sts => alt + shift + r => cambio de nombre de todas las variables en el código
