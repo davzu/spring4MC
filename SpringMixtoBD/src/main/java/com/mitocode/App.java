@@ -2,7 +2,11 @@ package com.mitocode;
 
 import java.util.List;
 
+import javax.security.auth.login.AppConfigurationEntry;
+
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.mitocode.model.Persona;
@@ -17,8 +21,7 @@ public class App {
 		IPersonaService service = (IPersonaService) context.getBean(PersonaServiceImpl.class);
 		App app = new App();
 		
-		app.delete(service);
-		
+		app.listAll(service);
 	}
 	
 	private void create(IPersonaService service){
@@ -26,7 +29,7 @@ public class App {
 	}
 	
 	private void update(IPersonaService service){
-		service.update(new Persona(4,"Maria", "Carranza"));
+		service.update(new Persona(14,"Esteba", "Carranza"));
 	}
 	
 	private void listAll(IPersonaService service){
@@ -45,7 +48,7 @@ public class App {
 	}
 	
 	private void delete(IPersonaService service){
-		service.delete(3);
+		service.delete(15);
 	}
 
 }
