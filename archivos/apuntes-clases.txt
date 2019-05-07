@@ -18,7 +18,8 @@ private IPersonaDAO daoPersona; => autowired encontrará la implementación Person
 
 <context:component-scan base-package="com...."></context:component-scan> => escanea todas las clases que estén estereotipadas
 
-
+segmentos plantillas bootstrap
+https://bootsnipp.com/
 
 
 
