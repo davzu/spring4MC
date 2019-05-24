@@ -1,0 +1,23 @@
+server:
+   port: 8099
+ 
+eureka:
+  client:
+    serviceUrl:
+      #defaultZone: http://localhost:8761/eureka/
+      defaultZone: https://mito-eureka-dz.herokuapp.com/eureka
+
+
+zuul:
+  routes:
+     forma1:
+      path: /micro-client/**
+      #url: http://localhost:8080/
+      url:  https://mito-micro-dz.herokuapp.com
+     forma2:
+      path: /micro-api/**
+      serviceId: MICRO-CLIENT
+     nodejs: 
+      path: /node-client/**
+      #url: http://localhost:3000/getURL
+      url: https://mito-micro-node-dz.herokuapp.com
