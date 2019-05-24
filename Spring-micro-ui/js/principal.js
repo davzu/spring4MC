@@ -3,7 +3,7 @@ $(document).ready(function () {
 
     $.ajax({
         type: "GET",
-        url: "http://localhost:8080/persona/leer/" + id,
+        url: "https://mito-micro-dz.herokuapp.com/persona/leer/" + id,
         contentType: "application/json; charset=utf-8",
         dataType: "json",
         success: function (models) {
@@ -29,7 +29,7 @@ $(document).ready(function () {
 
     $.ajax({
         type: "GET",
-        url: "http://localhost:8080/habilidad/listar/" + id,
+        url: "https://mito-micro-dz.herokuapp.com/habilidad/listar/" + id,
         contentType: "application/json; charset=utf-8",
         dataType: "json",
         success: function (models) {
@@ -63,7 +63,8 @@ $(document).ready(function () {
     $(document).on('click', "#btnEnviar", function (e) {        
         $.ajax({
             type: "GET",
-            url: "https://mito-zuul-sp.herokuapp.com/node-client/getURL",
+            url: "https://mito-zuul-dz.herokuapp.com/node-client/getURL",
+            //url: "https://mito-zuul-sp.herokuapp.com/node-client/getURL",
             //retornara https://yt3.ggpht.com/-svmpAtQZ_Tc/AAAAAAAAAAI/AAAAAAAAAAA/41N37I0zCko/s900-c-k-no-mo-rj-c0xffffff/photo.jpg
             async: false,
             dataType: "text",

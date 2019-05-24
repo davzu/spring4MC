@@ -1,0 +1,59 @@
+https://mito-eureka-dz.herokuapp.com
+https://mito-micro-dz.herokuapp.com
+https://mito-micro-node-dz.herokuapp.com
+https://mito-zuul-dz.herokuapp.com
+https://mito-micro-ui-dz.herokuapp.com/
+
+https://mito-micro-dz.herokuapp.com/habilidad/listar/1
+https://mito-zuul-dz.herokuapp.com/micro-client/habilidad/listar/1
+
+heroku login
+
+SpringEureka
+mvn compile
+mvn package -Dmaven.test.skip=true
+// archivo Procfile para heroku y .gitignore para subir solo las fuentes
+git init
+git add .
+git commit -m "Inicial eureka"
+heroku apps:create mito-eureka-dz
+git push heroku master
+
+SpringGateway
+mvn compile
+mvn package -Dmaven.test.skip=true
+// archivo Procfile para heroku y .gitignore para subir solo las fuentes
+git init
+git add .
+git commit -m "Inicial gateway"
+heroku apps:create mito-zuul-dz
+git push heroku master
+
+SpringMicro
+mvn compile
+mvn package -Dmaven.test.skip=true
+// archivo Procfile para heroku y .gitignore para subir solo las fuentes
+git init
+git add .
+git commit -m "Inicial SpringMicro"
+heroku apps:create mito-micro-dz
+git push heroku master
+// insertar datos
+heroku pg:psql -a spring-micro-dz
+
+Spring-micro-ui
+git init
+git add .
+git commit -m "Inicial Spring-micro-ui"
+heroku apps:create mito-micro-ui-dz
+git push heroku master
+
+nodejs-service
+git init
+git add .
+git commit -m "Inicial nodejs-service"
+heroku apps:create mito-micro-node-dz
+git push heroku master
+
+
+

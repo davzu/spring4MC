@@ -21,7 +21,7 @@ function showPassword() {
             let correo = document.getElementById("email").value;        
             $.ajax({
                 type: "GET",
-                url: "http://localhost:8080/persona/leerCorreo/" + correo,
+                url: "https://mito-micro-dz.herokuapp.com/persona/leerCorreo/" + correo,
                 contentType: "application/json; charset=utf-8",
                 dataType: "json",
                 success: function (data) {                
